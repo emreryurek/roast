@@ -4,24 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>ROAST | Coffee & Good Moments</title>
+    <title>ROAST | Coffee &amp; Good Moments</title>
 
-    <meta
-        name="description"
-        content="ROAST Coffee & Good Moments — kaliteli kahve, taze tatlılar ve keyifli anlar."
-    >
-    <link rel="icon" type="image/png" href="images/favicon.jpg">
+    <meta name="description" content="ROAST Coffee &amp; Good Moments — kaliteli kahve, taze tatlılar ve keyifli anlar.">
+    <link rel="icon" type="image/jpeg" href="images/favicon.jpg">
     <link rel="stylesheet" href="style.css">
+
+    <!-- Örnek çalışma şeridi ve ek kurallar. style.css'e dokunmaz. Teslimde bu bloğu sil. -->
+    <style>
+        .ery-demo {
+            position: fixed; left: 0; right: 0; bottom: 0; z-index: 2000;
+            display: flex; justify-content: center; align-items: center; flex-wrap: wrap;
+            gap: 6px 14px; padding: 10px 16px;
+            background: #c99a5b; color: #111;
+            font: bold 13px/1.4 Arial, sans-serif; text-align: center;
+        }
+        .ery-demo a { color: #111; text-decoration: underline; white-space: nowrap; }
+        body { padding-bottom: 56px; }
+
+        .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+        .call-button {
+            display: inline-block; padding: 14px 26px;
+            border: 1px solid #8a8a8a; color: #fff; background: transparent;
+            font: bold 14px Arial, sans-serif; text-align: center; text-decoration: none;
+        }
+        .call-button:hover { border-color: #c99a5b; color: #c99a5b; }
+
+        .contact-form button { cursor: pointer; }
+
+        a:focus-visible, button:focus-visible, input:focus-visible,
+        select:focus-visible, textarea:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+
+        @media (max-width: 600px) {
+            .hero-actions { flex-direction: column; align-items: stretch; }
+            .hero-actions .main-button, .hero-actions .call-button { width: 100%; text-align: center; }
+            body { padding-bottom: 74px; }
+        }
+    </style>
 </head>
 
 <body>
 
+    <!--
+      MÜŞTERİYE TESLİM EDERKEN DEĞİŞTİRİLECEKLER:
+      1) Telefon: 0555 555 55 55 / +905555555555 (tel, WhatsApp x2, hero "Hemen Ara")
+      2) Adres, çalışma saatleri, menü fiyatları ve harita (iframe + "Yol Tarifi Al")
+      3) Form adresi (formsubmit.co/...) ve _next adresi
+      4) Alttaki "örnek çalışma" şeridini (class="ery-demo") ve <style> bloğundaki .ery-demo kurallarını sil
+    -->
+
     <!-- HEADER -->
     <header class="header">
 
-        <a href="#anasayfa" class="logo">
-            ROAST
-        </a>
+        <a href="#anasayfa" class="logo">ROAST</a>
 
         <nav class="nav">
             <a href="#anasayfa">Ana Sayfa</a>
@@ -31,23 +66,19 @@
             <a href="#iletisim">İletişim</a>
         </nav>
 
-        <a href="#iletisim" class="reservation-button">
-            Masa Ayırt
-        </a>
+        <a href="#iletisim" class="reservation-button">Masa Ayırt</a>
 
     </header>
 
 
-    <!-- HERO -->
     <main>
 
+        <!-- HERO -->
         <section class="hero" id="anasayfa">
 
             <div class="hero-content">
 
-                <span class="eyebrow">
-                    COFFEE • FOOD • GOOD MOMENTS
-                </span>
+                <span class="eyebrow">COFFEE • FOOD • GOOD MOMENTS</span>
 
                 <h1>
                     Kahve,<br>
@@ -59,9 +90,10 @@
                     ve kendine ayırdığın güzel bir an.
                 </p>
 
-                <a href="#menu" class="main-button">
-                    Menüyü Keşfet
-                </a>
+                <div class="hero-actions">
+                    <a href="#menu" class="main-button">Menüyü Keşfet</a>
+                    <a href="tel:+905555555555" class="call-button">Hemen Ara</a>
+                </div>
 
             </div>
 
@@ -72,78 +104,34 @@
         <section class="menu-section" id="menu">
 
             <div class="section-heading">
-
-                <span class="section-label">
-                    MENÜMÜZ
-                </span>
-
+                <span class="section-label">MENÜMÜZ</span>
                 <h2>
                     Sevdiğin tatlar,<br>
                     <span>özenle hazırlandı.</span>
                 </h2>
-
             </div>
-
 
             <div class="menu-grid">
 
                 <div class="menu-card">
-
                     <span class="menu-number">01</span>
-
-                    <h3>
-                        Kahveler
-                    </h3>
-
-                    <p>
-                        Espresso, Americano, Latte,
-                        Cappuccino ve daha fazlası.
-                    </p>
-
-                    <strong>
-                        90₺ — 180₺
-                    </strong>
-
+                    <h3>Kahveler</h3>
+                    <p>Espresso, Americano, Latte, Cappuccino ve daha fazlası.</p>
+                    <strong>90₺ — 180₺</strong>
                 </div>
 
-
                 <div class="menu-card">
-
                     <span class="menu-number">02</span>
-
-                    <h3>
-                        Soğuk İçecekler
-                    </h3>
-
-                    <p>
-                        Cold brew, iced latte,
-                        ferahlatıcı özel içecekler.
-                    </p>
-
-                    <strong>
-                        120₺ — 190₺
-                    </strong>
-
+                    <h3>Soğuk İçecekler</h3>
+                    <p>Cold brew, iced latte, ferahlatıcı özel içecekler.</p>
+                    <strong>120₺ — 190₺</strong>
                 </div>
 
-
                 <div class="menu-card">
-
                     <span class="menu-number">03</span>
-
-                    <h3>
-                        Tatlılar
-                    </h3>
-
-                    <p>
-                        Günlük hazırlanan cheesecake,
-                        brownie ve özel tatlılar.
-                    </p>
-
-                    <strong>
-                        140₺ — 220₺
-                    </strong>
-
+                    <h3>Tatlılar</h3>
+                    <p>Günlük hazırlanan cheesecake, brownie ve özel tatlılar.</p>
+                    <strong>140₺ — 220₺</strong>
                 </div>
 
             </div>
@@ -158,23 +146,17 @@
 
             <div class="about-content">
 
-                <span class="section-label">
-                    HİKAYEMİZ
-                </span>
+                <span class="section-label">HİKAYEMİZ</span>
 
                 <h2>
                     Kahveyi sadece<br>
                     <span>içmiyoruz.</span>
                 </h2>
 
-                <p>
-                    ROAST, iyi kahvenin güzel bir ortamla
-                    buluştuğunda daha anlamlı olduğuna inanır.
-                </p>
+                <p>ROAST, iyi kahvenin güzel bir ortamla buluştuğunda daha anlamlı olduğuna inanır.</p>
 
                 <p>
-                    Sabahın ilk kahvesinden arkadaşlarla
-                    geçirilen uzun akşamlara kadar,
+                    Sabahın ilk kahvesinden arkadaşlarla geçirilen uzun akşamlara kadar,
                     her fincanı özenle hazırlıyoruz.
                 </p>
 
@@ -187,37 +169,18 @@
         <section class="gallery-section" id="galeri">
 
             <div class="section-heading">
-
-                <span class="section-label">
-                    ROAST'TAN KARELER
-                </span>
-
+                <span class="section-label">ROAST'TAN KARELER</span>
                 <h2>
                     Mekânımızdan<br>
                     <span>birkaç detay.</span>
                 </h2>
-
             </div>
 
-
             <div class="gallery-grid">
-
-                <div class="gallery-item gallery-large">
-                    <span>KAHVE</span>
-                </div>
-
-                <div class="gallery-item">
-                    <span>MEKÂN</span>
-                </div>
-
-                <div class="gallery-item">
-                    <span>DETAY</span>
-                </div>
-
-                <div class="gallery-item">
-                    <span>TATLI</span>
-                </div>
-
+                <div class="gallery-item gallery-large"><span>KAHVE</span></div>
+                <div class="gallery-item"><span>MEKÂN</span></div>
+                <div class="gallery-item"><span>DETAY</span></div>
+                <div class="gallery-item"><span>TATLI</span></div>
             </div>
 
         </section>
@@ -226,18 +189,14 @@
         <!-- CTA -->
         <section class="cta">
 
-            <span class="section-label">
-                BUGÜN BİZE UĞRA
-            </span>
+            <span class="section-label">BUGÜN BİZE UĞRA</span>
 
             <h2>
                 Bir kahveye<br>
                 <span>ne dersin?</span>
             </h2>
 
-            <a href="#iletisim" class="main-button">
-                Bize Ulaş
-            </a>
+            <a href="#iletisim" class="main-button">Bize Ulaş</a>
 
         </section>
 
@@ -247,9 +206,7 @@
 
             <div class="contact-info">
 
-                <span class="section-label">
-                    İLETİŞİM
-                </span>
+                <span class="section-label">İLETİŞİM</span>
 
                 <h2>
                     Seni<br>
@@ -260,53 +217,27 @@
 
                     <div class="contact-item">
                         <span>TELEFON</span>
-                        <strong>
-                            0555 555 55 55
-                        </strong>
-                    </div>
-
-                    <div class="contact-item">
-                        <span>TELEFON</span>
-                        <strong>
-                            <a href="tel:+905555555555">
-                                0555 555 55 55
-                            </a>
-                        </strong>
+                        <strong><a href="tel:+905555555555">0555 555 55 55</a></strong>
                     </div>
 
                     <div class="contact-item">
                         <span>WHATSAPP</span>
-
                         <strong>
-                            <a
-                                href="https://wa.me/905555555555"
-                                target="_blank"
-                            >
-                                0555 555 55 55
-                            </a>
+                            <a href="https://wa.me/905555555555" target="_blank" rel="noopener">0555 555 55 55</a>
                         </strong>
-
-                        <a
-                            href="https://wa.me/905555555555"
-                            target="_blank"
-                            class="whatsapp-button"
-                        >
+                        <a href="https://wa.me/905555555555" target="_blank" rel="noopener" class="whatsapp-button">
                             WhatsApp'tan Hızlıca Ulaşın
                         </a>
                     </div>
 
                     <div class="contact-item">
                         <span>ADRES</span>
-                        <strong>
-                            İstanbul, Türkiye
-                        </strong>
+                        <strong>Örnek Mah. Örnek Sk. No:1, İstanbul</strong>
                     </div>
 
                     <div class="contact-item">
                         <span>ÇALIŞMA SAATLERİ</span>
-                        <strong>
-                            Her gün · 09:00 — 23:00
-                        </strong>
+                        <strong>Her gün · 09:00 — 23:00</strong>
                     </div>
 
                 </div>
@@ -314,86 +245,53 @@
             </div>
 
 
-            <form class="contact-form">
+            <!-- Örnek form: mesajlar ERY Studio'ya düşer. Müşteriye teslimde adresi değiştir. -->
+            <form class="contact-form" action="https://formsubmit.co/erystudio.web@gmail.com" method="POST">
 
-                <input
-                    type="text"
-                    name="name"
-                    placeholder="Adınız Soyadınız"
-                    required
-                >
+                <input type="hidden" name="_subject" value="ROAST ÖRNEK SİTE - Form Denemesi">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="https://emreryurek.github.io/roast/tesekkurler.html">
+                <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
 
-                <input
-                    type="tel"
-                    name="phone"
-                    placeholder="Telefon Numaranız"
-                    required
-                >
+                <input type="text" name="name" placeholder="Adınız Soyadınız" autocomplete="name" required>
+                <input type="tel" name="phone" placeholder="Telefon Numaranız" autocomplete="tel" required>
 
                 <select name="reservation" required>
-
-                    <option value="">
-                        Masa / Rezervasyon
-                    </option>
-
-                    <option value="2 kişilik">
-                        2 kişilik
-                    </option>
-
-                    <option value="3-4 kişilik">
-                        3-4 kişilik
-                    </option>
-
-                    <option value="5+ kişilik">
-                        5+ kişilik
-                    </option>
-
+                    <option value="">Masa / Rezervasyon</option>
+                    <option value="2 kişilik">2 kişilik</option>
+                    <option value="3-4 kişilik">3-4 kişilik</option>
+                    <option value="5+ kişilik">5+ kişilik</option>
                 </select>
 
-                <textarea
-                    name="message"
-                    rows="5"
-                    placeholder="Mesajınız"
-                ></textarea>
+                <textarea name="message" rows="5" placeholder="Gün ve saat tercihiniz"></textarea>
 
-                <button
-                    type="submit"
-                    class="main-button"
-                >
-                    Talep Gönder
-                </button>
+                <button type="submit" class="main-button">Talep Gönder</button>
 
             </form>
-                    </form>
 
 
-        <div class="map-box">
+            <div class="map-box">
 
-            <div class="map-title">
-                <span>LOKASYON</span>
+                <div class="map-title">
+                    <span>LOKASYON</span>
+                    <h3>Bizi Bulun</h3>
+                </div>
 
-                <h3>
-                    Bizi Bulun
-                </h3>
+                <iframe
+                    src="https://www.google.com/maps?q=Istanbul%2C%20Turkey&output=embed"
+                    title="ROAST konum haritası"
+                    loading="lazy"
+                    allowfullscreen
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+
+                <a href="https://www.google.com/maps/search/?api=1&query=Istanbul%2C%20Turkey"
+                   target="_blank" rel="noopener" class="map-button">
+                    Yol Tarifi Al
+                </a>
+
             </div>
-
-            <iframe
-                src="https://www.google.com/maps?q=Istanbul%2C%20Turkey&output=embed"
-                loading="lazy"
-                allowfullscreen
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-
-            <a
-                href="https://www.google.com/maps/search/?api=1&query=Istanbul%2C%20Turkey"
-                target="_blank"
-                class="map-button">
-                Yol Tarifi Al
-            </a>
-
-        </div>
-
-    </section>
 
         </section>
 
@@ -402,20 +300,15 @@
 
     <!-- FOOTER -->
     <footer class="footer">
-
-        <strong>
-            ROAST
-        </strong>
-
-        <p>
-            Coffee • Food • Good Moments
-        </p>
-
-        <span>
-            © 2026 ROAST
-        </span>
-
+        <strong>ROAST</strong>
+        <p>Coffee • Food • Good Moments</p>
+        <span>© 2026 ROAST</span>
     </footer>
+
+    <div class="ery-demo">
+        <span>Bu site ERY Studio'nun örnek çalışmasıdır.</span>
+        <a href="https://wa.me/905325023600?text=Merhaba%2C%20ROAST%20%C3%B6rne%C4%9Fini%20g%C3%B6rd%C3%BCm%2C%20bana%20da%20site%20istiyorum." target="_blank" rel="noopener">Size de hazırlayalım</a>
+    </div>
 
 </body>
 </html>
