@@ -1,1 +1,83 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Teşekkürler | ROAST</title>
+    <link rel="icon" type="image/jpeg" href="images/favicon.jpg">
+    <link rel="stylesheet" href="style.css">
 
+    <!-- Örnek çalışma şeridi ve bu sayfaya özel kurallar. style.css'e dokunmaz. -->
+    <style>
+        .thanks {
+            min-height: 100vh;
+            display: flex; flex-direction: column; justify-content: center; align-items: flex-start;
+            padding: 140px 9% 100px;
+            background-image:
+                linear-gradient(90deg, rgba(23,18,14,.98) 0%, rgba(23,18,14,.88) 45%, rgba(23,18,14,.6) 100%),
+                url("images/hero.jpg");
+            background-size: cover; background-position: center;
+        }
+        .thanks h1 {
+            margin: 22px 0 26px;
+            font-size: clamp(54px, 9vw, 100px);
+            line-height: .92; font-weight: normal;
+        }
+        .thanks h1 span { color: #c99a5b; font-style: italic; }
+        .thanks p {
+            max-width: 480px; margin: 0 0 35px;
+            color: #b9aea0; font: 17px/1.7 Arial, sans-serif;
+        }
+        .ery-demo {
+            position: fixed; left: 0; right: 0; bottom: 0; z-index: 10000;
+            display: flex; justify-content: center; align-items: center; flex-wrap: wrap;
+            gap: 6px 14px; padding: 10px 16px;
+            background: #c99a5b; color: #111;
+            font: bold 13px/1.4 Arial, sans-serif; text-align: center;
+        }
+        .ery-demo a { color: #111; text-decoration: underline; white-space: nowrap; }
+        a:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+        @media (max-width: 600px) {
+            .thanks { padding: 120px 7% 110px; }
+            .thanks h1 { font-size: 54px; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <a href="index.html" class="logo">ROAST</a>
+        <nav class="nav">
+            <a href="index.html#anasayfa">Ana Sayfa</a>
+            <a href="index.html#menu">Menü</a>
+            <a href="index.html#hakkimizda">Hakkımızda</a>
+            <a href="index.html#galeri">Galeri</a>
+            <a href="index.html#iletisim">İletişim</a>
+        </nav>
+        <a href="index.html#iletisim" class="reservation-button">Masa Ayırt</a>
+    </header>
+
+    <main>
+        <section class="thanks">
+            <span class="section-label">TALEP ALINDI</span>
+            <h1>Teşekkürler,<br><span>görüşürüz.</span></h1>
+            <p>Talebiniz bize ulaştı. En kısa sürede sizinle iletişime geçeceğiz.</p>
+            <a href="index.html" class="main-button">Ana Sayfaya Dön</a>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <strong>ROAST</strong>
+        <p>Coffee • Food • Good Moments</p>
+        <span>© 2026 ROAST</span>
+    </footer>
+
+    <div class="ery-demo">
+        <span>Bu site ERY Studio'nun örnek çalışmasıdır.</span>
+        <a href="https://wa.me/905325023600?text=Merhaba%2C%20ROAST%20%C3%B6rne%C4%9Fini%20g%C3%B6rd%C3%BCm%2C%20bana%20da%20site%20istiyorum." target="_blank" rel="noopener">Size de hazırlayalım</a>
+    </div>
+
+</body>
+</html>
